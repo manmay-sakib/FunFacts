@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.funfacts.ui.screens.FunFactsNavigationGraph
 import com.example.funfacts.ui.screens.Routes
 import com.example.funfacts.ui.screens.UserInputScreen
 import com.example.funfacts.ui.screens.WelcomeScreen
@@ -32,16 +33,5 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun FunFactsApp(){
-    val navController = rememberNavController()
-
-    NavHost(navController = navController, startDestination = Routes.USER_INPUT_SCREEN){
-        composable(Routes.USER_INPUT_SCREEN){
-            UserInputScreen()
-
-        }
-        composable(Routes.WELCOME_SCREEN){
-            WelcomeScreen()
-        }
-
-    }
+    FunFactsNavigationGraph()
 }
