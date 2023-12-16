@@ -11,7 +11,7 @@ fun FunFactsNavigationGraph() {
 
     NavHost(navController = navController, startDestination = Routes.USER_INPUT_SCREEN){
         composable(Routes.USER_INPUT_SCREEN){
-            UserInputScreen(navController)
+            UserInputScreen()
 
         }
         composable(Routes.WELCOME_SCREEN){
